@@ -85,7 +85,7 @@ class FeatureImportanceExplainer:
             top_perm, self.output_dir / f"permutation_importance_top{topN}.png"
         )
 
-    def get_shap(self, X, n_sampling: int = 1000):
+    def get_shap(self, X: pd.DataFrame, n_sampling: int = 1000):
         X_sample = X.sample(n=min(n_sampling, len(X)), random_state=42)
 
         explainer = shap.TreeExplainer(self.model, feature_names=self.feature_names)
