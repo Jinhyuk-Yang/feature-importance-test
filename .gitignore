@@ -201,6 +201,3 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-
-# Custom
-artifacts/
